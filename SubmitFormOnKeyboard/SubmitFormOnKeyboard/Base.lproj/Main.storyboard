@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SubmitFormOnKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPI-lT-McD">
+                                <rect key="frame" x="98" y="175" width="184" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="送信フォームを表示"/>
+                                <connections>
+                                    <action selector="showKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ouM-cD-GGK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPy-9q-RLF">
+                                <rect key="frame" x="16" y="73" width="343" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q9s-jJ-Yyz">
+                                <rect key="frame" x="0.0" y="667" width="375" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-eq-ycO">
+                                        <rect key="frame" x="8" y="10" width="304" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3tW-nm-SSR"/>
+                                            <constraint firstAttribute="width" constant="304" id="Lgd-XT-dCv"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYF-wk-apG">
+                                        <rect key="frame" x="320" y="6" width="41" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="wOO-Zu-aOd"/>
+                                            <constraint firstAttribute="width" constant="41" id="x3B-YE-adU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="送信"/>
+                                        <connections>
+                                            <action selector="submitText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fzh-bJ-YFU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DYF-wk-apG" firstAttribute="top" secondItem="q9s-jJ-Yyz" secondAttribute="top" constant="6" id="UZm-oH-f4h"/>
+                                    <constraint firstItem="DYF-wk-apG" firstAttribute="leading" secondItem="lf5-eq-ycO" secondAttribute="trailing" constant="8" id="ZMB-oE-fkF"/>
+                                    <constraint firstAttribute="bottom" secondItem="lf5-eq-ycO" secondAttribute="bottom" constant="10" id="akv-3N-lGJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="DYF-wk-apG" secondAttribute="bottom" constant="5" id="bLT-6R-Usb"/>
+                                    <constraint firstItem="DYF-wk-apG" firstAttribute="leading" secondItem="lf5-eq-ycO" secondAttribute="trailing" constant="8" id="f1Y-nq-aOl"/>
+                                    <constraint firstAttribute="trailing" secondItem="DYF-wk-apG" secondAttribute="trailing" constant="14" id="pbl-c0-OMA"/>
+                                    <constraint firstItem="lf5-eq-ycO" firstAttribute="leading" secondItem="q9s-jJ-Yyz" secondAttribute="leading" constant="8" id="ppH-r0-PX8"/>
+                                    <constraint firstItem="lf5-eq-ycO" firstAttribute="top" secondItem="q9s-jJ-Yyz" secondAttribute="top" constant="10" id="wuG-Wp-e9a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q9s-jJ-Yyz" secondAttribute="bottom" constant="-50" id="tOS-ov-vNJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cnq-KS-C1M" appends="YES" id="gZs-6Z-CA6"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="submitForm" destination="q9s-jJ-Yyz" id="jb4-kz-Cej"/>
+                        <outlet property="submitFormBottomConstraints" destination="tOS-ov-vNJ" id="UXq-bq-Tho"/>
+                        <outlet property="textField" destination="lf5-eq-ycO" id="2nw-HT-tAz"/>
+                        <outlet property="textLabel" destination="gPy-9q-RLF" id="Igo-VI-mGV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cnq-KS-C1M">
+                    <connections>
+                        <action selector="closeKeyboard:" destination="BYZ-38-t0r" id="szR-ML-VZx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
